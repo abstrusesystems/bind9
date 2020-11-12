@@ -38,9 +38,9 @@ init_data() {
 init_data
 
 #check for bind configuration in default location
-if [[ ! -f ${DATA}/etc/named.conf ]]
+if [[ ! -f ${DATA}/etc/bind/named.conf ]]
 then
-	echo "Please place your bind9 configuration in ${DATA}/etc/named.conf"
+	echo "Please place your bind9 configuration in ${DATA}/etc/bind/named.conf"
 fi
 
 # run CMD
