@@ -9,29 +9,29 @@ init_data() {
 	mkdir -p ${DATA}
 	
 	# if not directory /etc then create
-	if [[ ! -d ${DATA}/etc ]];
+	if [[ ! -d ${DATA}/etc/bind ]];
 	then
-		mv /etc/bind ${DATA}/etc
+		mv /etc/bind ${DATA}/etc/bind
 	fi
 	
-	# delete old location
-	rm -rf /etc/bind
+	# empty old location
+	rm -Rfv /etc/bind/*
 	
 	# link old location to new directory
-	ln -sf ${DATA}/etc /etc/bind
+	ln -sf ${DATA}/etc/bind /etc/bind
 
 
 	# if not directory /var then create
-	if [[ ! -d ${DATA}/var ]];
+	if [[ ! -d ${DATA}/var/bind ]];
 	then
-		mv /var/bind ${DATA}/var
+		mv /var/bind ${DATA}/var/bind
 	fi
 	
 	# delete old location
-	rm -rf /var/bind
+	rm -Rfv /var/bind/*
 	
 	# link old location to new directory
-	ln -sf ${DATA}/var /var/bind
+	ln -sf ${DATA}/var/bind /var/bind
 }
 
 init_data
