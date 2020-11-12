@@ -6,7 +6,8 @@ set -e
 # initialize data directory
 init_data() {
 	# create root directory
-	mkdir -p ${DATA}
+	mkdir -p ${DATA}/etc
+	mkdir -p ${DATA}/var
 	
 	# if not directory /etc then create
 	if [[ ! -d ${DATA}/etc/bind ]];
