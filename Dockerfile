@@ -1,7 +1,7 @@
 FROM alpine:latest
 LABEL maintainer="github -at- abstruse -dot- systems"
 
-ENV DATA=/srv/bind
+ENV DATA=/srv/bind9
 
 RUN apk add --update --no-cache bind
 
